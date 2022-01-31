@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Raleway", sans-serif;
+	color: black;
+}
+
+header {
+	height: 100%;
+	background: url("./../images/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	color: white;
+	position: relative;
+	height: 50vh;
+}
+
+h1 {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: whitesmoke;
+	font-size: 75px;
+	font-weight: normal;
+}
+
+nav {
+	max-width: 996px;
+	text-align: center;
+	margin: auto;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+	margin-top: 0;
+	width: 100%;
+	line-height: 50px;
+}
+
+ul li {
+	display: inline-block;
+	padding: 25px;
+	vertical-align: text-top;
+}
+
+ul li a {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+}
+
+ul li a:hover {
+	border-bottom: 1px solid white;
+}
+
+ul li a.tt:hover {
+	border-bottom: 0;
+}
+
+@media screen and (max-width: 992px) {
+	h1 {
+		font-size: 60px;
+	}
+	ul li a {
+		font-size: 16px;
+	}
+
+	ul li {
+		padding: 15px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	ul li {
+		display: block;
+		padding: 0 15px;
+	}
+
+	ul li a.tt {
+		display: none;
+	}
+
+	h1 {
+		display: none;
+	}
+}
+
+.container {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.container-inner {
+	font-size: 0;
+	padding: 25px;
+	margin-top: 15px;
+	margin-bottom: 35px;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.kontakt-left {
+	display: inline-block;
+	width: 40%;
+	font-size: 16px;
+	vertical-align: top;
+}
+.kontakt-left p {
+	margin-top: 5px;
+}
+
+.kontakt-left h3 {
+	margin-bottom: 5px;
+}
+.kontakt-left h3:first-of-type {
+	margin-top: 0;
+}
+.kontakt-right {
+	display: inline-block;
+	width: 60%;
+	font-size: 16px;
+}
+.map {
+	width: 100%;
+	overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+	.kontakt-left,
+	.kontakt-right {
+		display: block;
+		width: 100%;
+	}
+	.kontakt-left {
+		margin-bottom: 35px;
+		text-align: center;
+	}
+}
+
+/* 
+    Jelovnik
+*/
+
+.container-inner-menu {
+	font-size: 16px;
+}
+
+.card {
+	display: inline-block;
+	width: 32%;
+	margin-right: 2%;
+	margin-bottom: 25px;
+	border-radius: 25px;
+}
+
+.card:nth-of-type(3n) {
+	margin-right: 0;
+}
+
+.card-image {
+	width: 100%;
+}
+
+.card img {
+	display: block;
+	max-width: 100%;
+	/* object-fit: scale-down; */
+}
+
+.card-text {
+	padding: 10px;
+}
+
+.card-text p {
+	font-size: 15px;
+}
+
+#naruci {
+	width: 50%;
+	padding: 7px 0;
+	font-size: 20px;
+	background-color: green;
+	border: none;
+	border-radius: 7px;
+	color: white;
+	cursor: pointer;
+	margin-top: 10px;
+	transition: 0.5s;
+}
+#naruci:hover {
+	transform: scale(1.05);
+}
+
+@media screen and (max-width: 992px) {
+	.card {
+		width: 48%;
+		margin-right: 4%;
+	}
+	.card:nth-of-type(2n) {
+		margin-right: 0px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.card {
+		width: 100%;
+		margin-bottom: 50px;
+	}
+}
+
+.meni-bottom {
+	margin: auto;
+}
+
+#prikaz,
+#isprazni,
+#logout {
+	display: inline-block;
+	margin-right: 35px;
+}
+
+#prikaz {
+	text-decoration: none;
+	padding: 10px 20px;
+	background-color: rgb(59, 99, 69);
+	color: white;
+	width: 20%;
+	text-align: center;
+	border-radius: 7px;
+}
+
+#isprazni input[type="submit"],
+#logout input[type="submit"] {
+	padding: 10px 20px;
+	background-color: rgb(59, 59, 128);
+	text-align: center;
+	border-radius: 7px;
+	color: white;
+	font-size: 14px;
+	cursor: pointer;
+	width: 100%;
+}
+
+#logout input[type="submit"] {
+	background-color: rgb(148, 84, 84);
+}
+
+@media screen and (max-width: 576px) {
+	#prikaz,
+	#isprazni,
+	#logout {
+		display: block;
+	}
+	#prikaz {
+		width: 95%;
+	}
+}
+
+/* Login forma */
+
+#login {
+	margin: 50px auto;
+	max-width: 500px;
+	background-color: rgb(240, 239, 239);
+	padding: 20px 20px 5px;
+	border-radius: 10px;
+}
+
+.row {
+	font-size: 0;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+#login {
+	font-size: 16px;
+}
+
+.form-left,
+.form-right {
+	font-size: 16px;
+	display: inline-block;
+}
+
+.form-left {
+	width: 35%;
+}
+.form-right {
+	width: 65%;
+}
+
+#login input[type="email"],
+#login input[type="password"] {
+	width: 100%;
+	padding: 5px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+
+#login input[type="email"]:focus,
+#login input[type="password"]:focus {
+	outline: none;
+}
+
+#login input[type="submit"] {
+	margin: 0 auto;
+	width: 100%;
+	padding: 7px;
+	background-color: green;
+	border: 1px solid green;
+	color: white;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#login input[type="submit"]:hover {
+	background-color: white;
+	color: green;
+	border: 1px solid green;
+}
+
+/* Signup forma */
+
+#register {
+	margin: 50px auto;
+	max-width: 500px;
+	background-color: rgb(240, 239, 239);
+	padding: 20px 20px 5px;
+	border-radius: 10px;
+}
+
+#register {
+	font-size: 16px;
+}
+
+.form-left,
+.form-right {
+	font-size: 16px;
+	display: inline-block;
+}
+
+.form-left {
+	width: 35%;
+}
+.form-right {
+	width: 65%;
+}
+
+#register input[type="email"],
+#register input[type="password"] {
+	width: 100%;
+	padding: 5px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+
+#register input[type="email"]:focus,
+#register input[type="password"]:focus {
+	outline: none;
+}
+
+#register input[type="submit"] {
+	margin: 0 auto;
+	width: 100%;
+	padding: 7px;
+	background-color: green;
+	border: 1px solid green;
+	color: white;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#register input[type="submit"]:hover {
+	background-color: white;
+	color: green;
+	border: 1px solid green;
+}
+
+/**********************
+	Galerija
+***********************/
+
+.galerija-row {
+	font-size: 0;
+}
+
+.img-container {
+	display: inline-block;
+	width: 32%;
+	margin-right: 2%;
+	margin-bottom: 2%;
+	font-size: 20px;
+	position: relative;
+}
+
+.img-container:nth-of-type(3n) {
+	margin-right: 0;
+}
+.img-container img {
+	display: block;
+	width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+	.img-container {
+		display: inline-block;
+		width: 49%;
+		margin-right: 2%;
+		margin-bottom: 2%;
+		font-size: 20px;
+		position: relative;
+	}
+
+	.img-container:nth-of-type(2n) {
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.img-container {
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 2%;
+		font-size: 20px;
+		position: relative;
+	}
+}
+
+/**********************
+	Pocetna
+***********************/
+
+.container-pocetna {
+	font-size: 0;
+}
+
+.container-pocetna-left,
+.container-pocetna-right {
+	font-size: 18px;
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+}
+
+.container-pocetna-left img,
+.container-pocetna-right img {
+	display: block;
+	width: 100%;
+}
+
+.padding {
+	padding: 0 25px 25px;
+}
+
+/* Prikaz */
+
+.prikaz {
+	font-size: 18px;
+	height: 25vh;
+}
+
+#nazad,
+#kupovina {
+	text-decoration: none;
+	padding: 10px 20px;
+	background-color: rgb(59, 99, 69);
+	color: white;
+	width: 40%;
+	text-align: center;
+	border-radius: 7px;
+}
+
+#kupovina {
+	margin-left: 30px;
+	background-color: rgb(59, 59, 128);
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+	background: linear-gradient(
+		to right,
+		#3b3b39,
+		#242424 20%,
+		#242424 80%,
+		#3b3b39
+	);
+	color: whitesmoke;
+}
